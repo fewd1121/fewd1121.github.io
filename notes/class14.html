@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>FEWD - Class 14</title>
+		<title>FEWD - Class 11</title>
 		<link rel="stylesheet" href="../css/reveal.css">
 		<link rel="stylesheet" href="../css/theme/general-assembly.css" id="theme">
 
@@ -27,15 +27,10 @@
 	<body>
 
 		<!--
-			Lesson 08 - JavaScript (pt. 1)
+			Lesson 11 - jQuery (pt. 3)
 
 			Learning Objectives:
-			- Identify JavaScript's capabilities
-			- Understand why developers use pseudo code
-			- Describe two JavaScript data types: strings and numbers
-			- Use variables to store/retrieve data
-			- Introduction to JavaScript functions
-			- Introduction to document.getElementById()
+
 		-->
 
 		<div class="reveal">
@@ -44,561 +39,432 @@
 					<h1>HELLO</h1>
 
 					<div class="text-left">
-						<p>1) Please download <a href="../materials/class07/class07.zip">Class 14 Starter Code</a></p>
+						<p>1) Please download <a href="../materials/class11/class11.zip">Class 11 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class="pad-left-lg">&#149; <code>first-javascript/</code></p>
-						<p>3) Last class's solution:</p>
-						<p class="pad-left-lg">&#149; <code>startup-matchmaker-solution/</code></p>
+						<p class=" pad-left-lg"><code>click-count/</code></p>
+						<!-- <p class=" pad-left-lg"><code>lightswitch/</code></p> -->
+						<p>3) Move the following into your homework directory:</p>
+						<p class="pad-left-lg"><code>temp-converter/</code></p>
+						<!-- <p>4) Make sure you HW is pushed up!</p> -->
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>Class #7 - 09/01/2016</h1>
-					<h1>Intro to Programming</h1>
+					<h1>Class #11 - 09/15/2016</h1>
+					<h1>Conditional Statements</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<!-- <section class="center">
+				<section class="center">
 					<h1>Announcements:</h1>
 
 					<div class="text-left">
-						<p>&#149; Final Projects! First deliverable due 03/28 (Monday)</p>
-						<p class="pad-left-lg">&rArr; Project Proposal & Wireframes</p>
-						<p>&#149; GA is buying us drinks! Tonight!</p>
+						<p>&#149; Final Projects - Milestone 2 - due 09/20 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; HTML rough draft</p>
+						<p class="pad-left-lg">&rArr; CSS rough draft</p>
 					</div>
-				</section> -->
+				</section>
 
 				<!-- QUESTIONS -->
-				<section class="center">
+				<!-- <section class="center">
 					<h1>Questions</h1>
 					<img src="../img/main/questions.jpg">
-				</section>
-
-				<!-- AGENDA -->
-				<section data-background="#FFF" class="text-left">
-					<h2>Agenda</h2>
-					<hr>
-
-					<div class="text-smaller">
-						<p>&#149; Review Startup Matchmaker</p>
-						<p>&#149; What is JavaScript and what can it do?</p>
-						<p>&#149; How to think programatically</p>
-						<p>&#149; Pseudo Code</p>
-						<p>&#149; JS Basics:</p>
-						<p class="pad-left-lg">&rArr; Data Types</p>
-						<p class="pad-left-lg">&rArr; Variables</p>
-						<p class="pad-left-lg">&rArr; Functions</p>
-						<p>&#149; <code>document.getElementById()</code> - maybe...</p>
-					</div>
-				</section>
-
-				<!-- REVIEW: STARTUP MATCHMAKER -->
-				<!-- <section class="center">
-					<h1>Review Startup Matchmaker</h1>
 				</section> -->
 
-				<!-- INTRO TO JAVASCRIPT -->
-				<section class="center">
-					<h1>Intro To JavaScript</h1>
-					<p>Hold on to your hats...</p>
-				</section>
-
-				<section class="center">
-					<img src="../img/class07/roller-coaster.png">
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h2>JavaScript: History</h2>
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
 					<hr>
 
-					<p>&#149; JavaScript &ne; Java</p>
-					<p>&#149; Born in 1995 - created in 10 days by Brendan Eich</p>
-					<p>&#149; JavaScript is one of the most <a href="http://githut.info/">popular languages</a></p>
-					<p>&#149; Attwood's Law &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
+					<div class="text-left">
+						<!-- <p class="text-smaller">&#149; <code>$(this)</code> Review</p> -->
+						<p class="text-smaller">&#149; Conditional statements</p>
+						<p class="text-smaller">&#149; Manipulating CSS Classes</p>
+						<p class="text-smaller">&#149; Chaining Functions</p>
+						<!-- <p class="text-smaller">&#149; Mid-Course Review</p>
+						<p class="text-smaller">&#149; Final Proect Convo's</p> -->
+					</div>
 				</section>
+
+				<!-- <section class="center">
+					<h1>$(this) Review</h1>
+					<div class="text-left">
+						<p>1. Open <code>calculator-box</code></p>
+						<p>2. Implement <code>$(this)</code> where you can</p>
+					</div>
+				</section> -->
 
 				<section class="center">
-					<h1>What Can JS Do In the Browser?</h1>
+					<h1>Conditional Statements</h1>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<h2>Javascript: What Can It Do?</h2>
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
 					<hr>
-
-					<p>Most uses of JavaScript fall into four categories:</p>
+					<p>Control Flow:</p>
 					<div class="pad-left-lg">
-						<p>1) Responding to user actions (events)</p>
-						<p>2) Changing HTML Content</p>
-						<p>3) Changing CSS Styles</p>
-						<p>4) Loading/sending data to and from the server</p>
+						<p>&#149; Order in which the computer executes program's statements</p>
+						<p>&#149; Determines which chunks of code are running at a given time</p>
 					</div>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<h2 class="text-left">JavaScript: What Can It Do?</h2>
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
 					<hr>
-					<p>A few examples:</p>
-					<div class="pad-left-lg">
-						<p>&#149; Adding / Removing Elements</p>
-						<p>&#149; Animating content</p>
-						<p>&#149; Changing CSS "on-the-fly"</p>
-						<p>&#149; Detecting user interactions</p>
-						<p>&#149; Form validation</p>
-						<p>&#149; Loading dynamic content</p>
+					<p>Sequential Control Flow:</p>
+					<p class="text-smaller pad-left-lg">&#149; Programs execute line by line, from top to bottom</p>
+					<p class="text-smaller pad-left-lg">&#149; Sor far, all our functions have been written this way</p>
+					<div class="text-center">
+						<img src="../img/class11/sequential-flow.png">
 					</div>
 				</section>
 
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
 
-
-				<section data-background="#FFF" class="text-left">
-					<h2>Javascript vs HTML + CSS?</h2>
-					<hr>
-					<h3>HTML/CSS</h3>
-					<p>&#149; HTML/CSS are used to define <u>initial</u> page state</p>
-					<p>&#149; HTML/CSS are (mostly) <u>static</u></p>
-					<h3>JS</h3>
-					<p>&#149; JS is used to define how page state can <u>change</u></p>
-					<p>&#149; JS is <u>dynamic</u></p>
-				</section>
-
-				<!-- INTRO TO PROGRAMMING -->
-				<section class="center">
-					<h1>Intro To Programming</h1>
-					<!-- <p>Next stop: 1337 h4x0r</p> -->
-					<img src="../img/class07/intro-to-programming.jpg" height="500px">
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h2>Intro to Programming</h2>
-
-					<hr>
-
-					<p><b>Q:</b> What is a program?</p>
-					<p class="fragment text-smaller pad-left-lg">&rArr; A program is a set of instructions that tells a computer how to carry-out a task</p>
-					<p><b>Q:</b> What is programming?</p>
-					<p class="fragment text-smaller pad-left-lg">&rArr; Programming is the task of writing those instructions in a language that the computer can understand</p>
-					<p><b>Q:</b> How do I become a programmer?</p>
-					<p class="fragment text-smaller pad-left-lg">&rArr; Not by learning a particular language, but by learning how to think like a computer</p>
-				</section>
-
-				<section class="center">
-					<h1>Think like a computer</h1>
-					<p>10101010100101010</p>
-				</section>
-
-				<section class="center">
-					<h1>Close your laptops</h1>
-					<p>Seriously.</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h2>Think like a CPU - What did we learn?</h2>
-					<hr>
-
-					<p>&#149; You have to speak the same language</p>
-					<p>&#149; Steps execute sequentially</p>
-					<p>&#149; Steps need to granular and precise</p>
-					<p>&#149; The computer will only do what you tell it to do</p>
-					<p>&#149; The computer is never wrong</p>
-				</section>
-
-				<section class="center">
-					<h1>Pseudo Code</h1>
-					<p>Like code, but not...</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h2>Pseudo Code</h2>
-					<hr>
-
-					<p>&#149; <b>Pseudo Code</b>:</p>
-					<p class="pad-left-lg text-smaller">&rArr; The process of thinking through a program, step-by-step, without actually writing a line of code</p>
-					<p class="pad-left-lg text-smaller">&rArr; A written outline of a program that can be converted into code</p>
-					<p class="pad-left-lg text-smaller">&rArr; Allows the programmer to focus on problem solving, not the precise layout of the code and its syntax</p>
-					<p class="pad-left-lg text-smaller">&rArr; Don't need to know how to code, to write pseudo code!</p>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Pseudo Code</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; Let's write pseudo code for a thermostat</p>
-						<p>&#149; Things to think about:</p>
-						<p class="pad-left-lg">&rArr; What is <u>goal</u> of our program? What are we trying to solve?</p>
-						<p class="pad-left-lg">&rArr; What are the <u>inputs</u> for our program? What pieces of data will be going into it?</p>
-						<p class="pad-left-lg">&rArr; What is the desired <u>output</u> of our program? Once the program runs, what should happen?</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Pseudo Code</h2>
-					<hr>
-
-					<div class="text-left text-smaller">
-						<p><code>determine target_temperature</code></p>
-						<p><code>target_temperature = 72</code></p>
-						<p><code>get current_temperature</code></p>
-						<p><code>current_temperature = 68</code></p>
-						<p><code>if current_temperature < target_temperature</code></p>
-						<p class="pad-left-lg"><code>turn_heater_up</code></p>
-						<p><code>if current_temperature >= target_temperature</code></p>
-						<p class="pad-left-lg"><code>turn_heater_off</code></p>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Working Locally With JavaScript</h1>
-					<p>Like my JavaScript? It's local...no big deal.</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h2>Working Locally with JavaScript</h2>
-					<hr>
-
-					<div class="text-smaller">
-						<p>&#149; Create JavaScript files using the <code>.js</code> extension</p>
-						<p>&#149; Example: <code>script.js</code></p>
-						<p>&#149; Two methods to link HTML and JS:</p>
-						<p class="pad-left-lg">&rArr; External (most common; preferred):</p>
+					<p>Sequential Control Flow Example:</p>
 <pre><code>
-	&lt;script type="text/javascript" src="script.js"></script>
+	function square () {
+		var inputNum = $('input').val();
+		var outputNum = inputNum * inputNum;
 
-</code></pre>
-						<p class="pad-left-lg">&rArr; Locally (in our HTML):</p>
-<pre><code>
-	<p>some text</p>
-	<script type="text/javascript">
-		// Write JavaScript here...plz don't do this
-	</script>
-
-</code></pre>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Code Along</h1>
-					<div class="text-left text-smaller">
-						<p>1. Open <code>first-javascript</code> directory in SublimeText</p>
-						<p>2. Open the file <code>script.js</code></p>
-						<p>3. Add the following to <code>index.html</code>, above <code>&lt;/body&gt;</code></p>
-<pre><code>
-	&lt;script type="text/javascript" src="script.js">&lt;/script>
-
-</code></pre>
-						<p>3. Add the following to <code>script.js</code></p>
-<pre><code>
-	alert('this is an alert. this is annoying');
-
-	document.write('writing to the document, like a boss');
-
-</code></pre>
-						<p>4. Save and open <code>index.html</code> in the browser</p>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Let's take a Break</h1>
-					<img src="../img/main/break-time-bear.jpg">
-				</section>
-
-				<!-- JAVASCRIPT DATA TYPES -->
-				<section class="center">
-					<h1>JavaScript Data Types</h1>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">JavaSript: Data Types</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; In the machine, there is only data</p>
-						<p>&#149; Data are separated by type:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Numbers</p>
-						<p class="pad-left-lg text-smaller">&rArr; Strings</p>
-						<p class="pad-left-lg text-smaller">&rArr; Booleans</p>
-						<p class="pad-left-lg text-smaller">&rArr; Objects</p>
-						<p class="pad-left-lg text-smaller">&rArr; Functions</p>
-						<p class="pad-left-lg text-smaller">&rArr; Null/Undefined</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Data Types: Numbers</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; Numbers:</p>
-						<p class="pad-left-lg">&rArr; Used for arithmetic: (operators: +, -, *, / )</p>
-						<div class="pad-left-lg">
-							<p class="pad-left-lg">2 + 2</p>
-							<p class="pad-left-lg">2 - 2</p>
-							<p class="pad-left-lg">2 * 2</p>
-							<p class="pad-left-lg">2 / 2</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Data Types: Strings</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; Srings:</p>
-						<p class="pad-left-lg">&rArr; Used to represent text: "Hello, World!"</p>
-						<p>&#149; Notable for <u>String Concatenation</u>:</p>
-						<div class="fragment">
-							<p class="pad-left-lg"><code>'c' + 'a' + 't'</code></p>
-							<p class="pad-left-lg"><code>=&gt; 'cat'</code></p>
-						</div>
-						<div class="fragment">
-							<p class="pad-left-lg"><code>'i have ' + 2 + 'cats'</code></p>
-							<p class="pad-left-lg"><code>=&gt; 'i have 2 cats;</code></p>
-						</div>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Code Along</h1>
-					<div class="text-left text-smaller">
-						<p>1. Reopen <code>first-javascript</code> in SublimeText</p>
-						<p>2. Add the following <code>document.write()</code> messages:</p>
-						<div class="pad-left-lg">
-							<p>&#149; The product of 10 and 10:</p>
-<pre><code>
-	document.write(10 * 10);
-
-</code></pre>
-							<p>&#149; The quotient of 100 and 10</p>
-							<p>&#149; The difference of 50 and 17</p>
-							<p>&#149; The sum of 50 and 17</p>
-							<p>&#149; Your first and last name</p>
-						</div>
-					</div>
-				</section>
-
-				<!-- VARIABLES -->
-				<section class="center">
-					<h1>Variables</h1>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Variables</h2>
-					<hr>
-
-					<div class="text-left">
-						<p class="text-smaller">&#149; Often, you will want to store, or keep track of, data in a program</p>
-						<p class="text-smaller">&#149; Declare using the <u>var</u> keyword</p>
-						<p class="text-smaller">&#149; Will store the piece of data in memory</p>
-						<p class="text-smaller">&#149; Use the variable's name to "call" it, or retrieve it from memory:</p>
-<pre><code>
-	var x = 2;
-	var y = 2;
-
-	x
-	=> 2
-
-	x + y
-	=> 4
-
-</code></pre>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Variables - Naming Rules</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; Take care when naming your variables</p>
-						<p>&#149; Variable names should reflect the data they describe</p>
-						<p>&#149; Other naming conventions:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&rArr; Names should start with a lowercase letter</p>
-							<p>&rArr; Cannot use spaces; use hyphens or underscores instead</p>
-							<p>&rArr; Better yet, use CamelCase:</p>
-<pre><code>
-	var currentTemp = 70;
-	var targetTemp = 73;
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Variables - Reassignment</h2>
-					<hr>
-
-					<p>1. Create a variable, x, and assign it to 2</p>
-					<p>
-<pre><code>
-	var x = 2;
-	> 2
-
-</code></pre>
-					</p>
-					<p>2. Perform some arithmetic on x</p>
-					<p>
-<pre><code>
-	x * 2
-	> 4
-
-</code></pre>
-					</p>
-					<p>3. What's x now equal to?</p>
-					<p>
-<pre><code>
-	x
-	> 2
-
-</code></pre>
-					</p>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Variables - Reassignment</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&rArr; You must <u>reassign</u> variables to change them</p>
-					</div>
-<pre><code>
-	var x = 2;
-	> 2
-
-	x * 2
-	> 4
-
-	x
-	> 2
-
-	x = x * 2
-	> 4
-
-	x
-	> 4
-
-</code></pre>
-				</section>
-
-				<section class="center">
-					<h1>Code Along</h1>
-					<div class="text-left">
-						<p>1. Open <code>first-javascript</code> in SublimeText</p>
-						<p>2. Store your previous arthimetic in variables:</p>
-<pre><code>
-	var num1 = 10 * 10;
-
-</code></pre>
-						<p>3. Use <code>document.write()</code> with the vaiables:</p>
-<pre><code>
-	document.write(num1);
-
-</code></pre>
-
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Functions</h1>
-					<img src="../img/class07/conjunction-function.jpg">
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Functions</h2>
-					<hr>
-
-					<div class="text-left">
-						<p class="text-smaller">&#149; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
-						<p class="text-smaller">&#149; Often take an input, perform logic on that input, and return ouput</p>
-						<p class="text-smaller">&#149; Think of them as miniature programs</p>
-
-						<p class="text-smaller">&#149; What does this function do?</p>
-<pre><code>
-	function hello () {
-		var greeting = 'hello!';
-
-		greeting = 'hello, world!';
-
-		alert(greeting);
+		$('#output').text(outputNum);
 	}
 
 </code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statments</h2>
+
+					<p>Programs can flow in other ways:</p>
+					<div class="text-center">
+						<img src="../img/class11/control-flows.jpg">
 					</div>
 				</section>
 
-				<section class="center" id="cool-id">
-					<p><code>document.getElementById()</code></p>
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+					<hr>
+					<p>If/Else Flow:</p>
+					<p class="pad-left-lg">&rArr; AKA <i>conditional</i> or <i>selection</i></p>
+					<p class="pad-left-lg">&rArr; Used to alter program flow when a decision must be made between two or more actions</p>
+					<p class="pad-left-lg">&rArr; This choice is usually made based on variables within the function/program</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+					<hr>
+					<p>If/Else Flow:</p>
+					<div class="text-center">
+						<img src="../img/class11/conditional-flow.jpg">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Condtional Statements</h2>
+					<hr>
+					<p>Sequential vs. Conditional Flows:</p>
+					<div class="text-center">
+						<img src="../img/class11/sequential-vs-conditional-flow.png" alt="">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Condtional Statements</h2>
+					<hr>
+					<p>Conditional Flows JavaScript Syntax:</p>
+<pre><code>
+	var x = 10;
+
+	if (x > 5) {
+		alert('x is larger than 5!');
+	} else {
+		alert('x is smaller than 5!');
+	}
+
+</code></pre>
+					<p class="text-smallest">&#149; Denoted by the <code>if</code> and <code>else</code> keywords</p>
+					<p class="text-smallest">&#149; Begins with a <u>condition</u>: <code>(x > 5)</code></p>
+					<p class="text-smallest">&#149; If the condition is true, the statment(s) in the "if block" will run</p>
+					<p class="text-smallest">&#149; If the condition is false, the statment(s) in the "else block" will run</p>
 				</section>
 
 				<section data-background="#FFF">
-					<p class="text-left">document.getElementById()</p>
-					<hr>
 
 					<div class="text-left">
-						<p>&#149; One of the most common/useful JavaScript methods</p>
-						<p>&#149; Used to query HTML and return an element with a certain ID attribute</p>
+						<h2>Logical Operators</h2>
+						<hr>
+						<p class="text-smaller">Assuming <code>var x = 3</code></p>
+					</div>
+					<img src="../img/class11/logical-operators.png" alt="">
+				</section>
+
+				<section class="text-left text-smaller" data-background="#FFF">
+					<h2>Logical Operators</h2>
+					<hr>
+					<p>Ex. 1</p>
 <pre><code>
-	document.getElementById('logo')
+	var x = 10;
+
+	if (x == 10) {
+		alert('bananas');
+	} else {
+		alert('apples');
+	}
 
 </code></pre>
-						<p>&#149; The above will look through an HTML document and return the first element with and ID = "logo"</p>
-					</div>
+
+					<hr>
+					<p>Ex. 2</p>
+<pre><code>
+	var x = 'cat';
+
+	if (x != 5) {
+		alert('tacos');
+	} else {
+		alert('salads');
+	}
+
+</code></pre>
+				</section>
+
+					<section class="text-left text-smaller" data-background="#FFF">
+					<h2>Logical Operators</h2>
+					<hr>
+					<p>Ex. 3</p>
+<pre><code>
+	var x = 10;
+
+	if (x >= 10) {
+		alert('oranges');
+	} else {
+		alert('strawberrys');
+	}
+
+</code></pre>
+
+					<hr>
+					<p>Ex. 4</p>
+<pre><code>
+	var x = 10;
+
+	if (x <= 10) {
+		alert('kiwis');
+	} else {
+		alert('olives');
+	}
+
+</code></pre>
 				</section>
 
 				<section class="center">
-					<h1>Code Along</h1>
-					<div class="text-left">
-						<p class="text-smaller">1. Open <code>first-javascript</code> in SublimeText</p>
-						<p class="text-smaller">2. Add the following elements to <code>index.html</code>:</p>
+					<h1>CodeAlong</h1>
+					<p><a href="https://repl.it/CAh1/4">https://repl.it/CAh1/4</a></p>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101">http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Condtional Statements - Multiple Conditions</h3>
+					<hr>
+					<p class="text-smaller">&#149; Often, programs will evaluate more than one condition</p>
+					<p class="text-smaller">&#149; In JS, use the <code>else if</code> for multiple conditions:</p>
+
 <pre><code>
-	<h1 id="title">Some Title</h1>
-	<p id="text-chunk">A block of text! Yay! Content! SEO!</p>
+	var x = 10;
+
+	if (x != 10) {
+		alert('beer');
+	} else if (x == 10) {
+		alert('coffee');
+	} else {
+		alert('water');
+	}
 
 </code></pre>
-						<p class="text-smaller">3. Use <code>document.getElementId()</code> to target the above elements and change their text color</p>
+				</section>
 
-<pre><code>
-	document.getElementById('title').style.color='red';
-
-</code></pre>
+				<section class="text-left" data-background="#FFF">
+					<h3>Condtional Statements - Multiple Conditions</h3>
+					<hr>
+					<div class="text-smallest">
+						<p><code>if (condition is true) {</code></p>
+						<p class="pad-left-lg"><code>alert("The condition is true!")</code></p>
+						<p><code>} else if (some other condition is true) {</code></p>
+						<p class="pad-left-lg"><code>alert('The first condition was false, but this one is true!')</code></p>
+						<p><code>} else if (some other conditions is true) {</code></p>
+						<p class="pad-left-lg"><code>alert('The first two conditions were false, but this one is true!')</code></p>
+						<p><code>} else {</code></p>
+						<p class="pad-left-lg"><code>alert('None of the above conditions were true!')</code></p>
+						<p><code>}</code></p>
 					</div>
 				</section>
+
+				<!-- <section class="center">
+					<h1>CodeAlong</h1>
+					<div class="text-left">
+						<p>Add more conditions to your temperature gauge:	</p>
+						<p><a href="http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101">http://codepen.io/cheshireoctopus/pen/	ZQzqLN?editors=101</a></p>
+					</div>
+				</section> -->
+
+				<section class="center">
+					<h1>Exercise - Click Count</h1>
+					<div class="text-left">
+						<p>1. Open <code>click-count/</code> in Sublime Text</p>
+						<p>2. Follow the instructions in <code>project.js</code></p>
+					</div>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="../img/main/break-time-bear.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Manipulating CSS Classes</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+					<hr>
+					<p><code>.addClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Adds classes to elements</p>
+<pre><code>
+	$('p').addClass('bold-text')
+
+	// would yield: <p class="bold-text"></p>
+
+</code></pre>
+					<p><code>.removeClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Removes classes from elements</p>
+<pre><code>
+	$('p').removeClass('bold-text')
+
+	// would yield: <p></p>
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+					<hr>
+					<p><code>.toggleClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Adds class to elements if it does not exist; remove if if id does</p>
+					<p class="text-smaller">&#149; Assuming the following HTML:</p>
+<pre><code>
+	<p>Some Paragraph</p>
+
+</code></pre>
+
+<pre><code>
+	$('p').toggleClass('bold-text')
+
+	// would yield: <p class="bold-text"></p>
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+
+					<p><code>.hasClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Returns <code>true</code> if the element has the class; <code>false</code> otherwise</p>
+					<p class="text-smaller">&#149; Assuming the following HTML:</p>
+<pre><code>
+	<div id="someEl" class="bold-text"></div>
+
+</code></pre>
+
+<pre><code>
+	if ($('#someEl').hasClass('bold-text')) {
+		// Do something special...
+	}
+
+</code></pre>
+				</section>
+
+				<!-- <section class="center">
+					<h1>CodeAlong - LightSwitch</h1>
+					<p>Open <code>lightswitch/</code> in SublimeText</p>
+				</section> -->
+
+				<!-- CHAINING FUNCTIONS -->
+				<section class="center">
+					<h1>Chaining Functions</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Chaining Functions</h2>
+					<hr>
+					<p>How can we improve this code:</p>
+<pre><code>
+	function doSomething () {
+		$('p').css('background-color', 'blue')
+		$('p').text('Some new text to be added')
+		$('p').slideDown()
+	}
+
+</code></pre>
+
+<div class="fragment">
+				<p>Function chaining:</p>
+<pre><code>
+	function doSomething () {
+		$('p')
+		  .css('background-color', 'blue')
+		  .text('Some new text to be added')
+		  .slideDown()
+	}
+
+</code></pre>
+</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Chaining Functions</h2>
+					<hr>
+					<p>&#149; Perform multiple effects/actions one after another</p>
+					<p>&#149; Only works when called on the SAME object:</p>
+<pre><code>
+	$('p').text('hello').css('color', 'red').slideDown()
+
+</code></pre>
+					<p>&#149; Some chained commands are queued; commands further down the chain will wait until previous commands have finished before executing</p>
+<pre><code>
+	$('p').slideDown(500).slideUp(500).slideDown(500)
+
+</code></pre>
+				</section>
+
+<!-- 				<section class="center">
+					<h1>CodeAlong - LightSwitch</h1>
+					<div class="text-left">
+					<p>1. Re-Open <code>lightswitch/</code> in SublimeText</p>
+					<p>2. Implement chaining where possible</p>
+					</div>
+				</section> -->
 
 				<section class="center">
 					<h1>Homework</h1>
-
 					<div class="text-left">
-						<p>1) Final Project: Ideas/concepts & wireframes/sketches</p>
-						<p>2) Finish <code>startup-matchmaker/</code></p>
-						<!-- <p>3) GA Dash - note the JS exercises</p> -->
-						<p>2) Complete any unfinished HW</p>
-						<p>3) Color Theme Switcher: more on this on Tuesday</p>
+						<p>1. Rough draft of HTML/CSS for final project</p>
+						<p>2. Temperature Converter</p>
 					</div>
 				</section>
+
+				<!-- <section class="center">
+					<h1>Mid-Course Survey</h1>
+				</section> -->
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
-				</section>
-
-				<!-- ON DECK -->
-				<section data-background="#FFF">
-					<h2 class="text-left">What's On Deck: JavaScript (pt. 2)</h2>
-					<hr>
-
-					<div class="text-left">
-						<h4>Class #8 (of 20) - Tuesday, September 6th</h4>
-
-						<div class="text-left">
-							<p>&rArr; More JavaScript!</p>
-							<p>&rArr; Functions</p>
-							<p>&rArr; The DOM</p>
-							<p>&rArr; JavaScript <code>.click</code> event</p>
-							<p>&rArr; Getting Input/Writing Output</p>
-						</div>
-					</div>
 				</section>
 
 				<section class="center">
@@ -636,3 +502,4 @@
 
 	</body>
 </html>
+

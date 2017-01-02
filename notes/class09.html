@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>FEWD - Class 9</title>
+		<title>FEWD - Class 08</title>
 		<link rel="stylesheet" href="../css/reveal.css">
 		<link rel="stylesheet" href="../css/theme/general-assembly.css" id="theme">
 
@@ -27,10 +27,10 @@
 	<body>
 
 		<!--
-			Lesson 09 - jQuery (pt. 1)
+			Lesson 15 - Responsive Web Design (pt. 2)
 
 			Learning Objectives:
-			-
+
 		-->
 
 		<div class="reveal">
@@ -39,522 +39,533 @@
 					<h1>HELLO</h1>
 
 					<div class="text-left">
-						<p>1) Please download <a href="../materials/class09/class09.zip">Class 09 Starter Code</a></p>
+						<!-- <p>1) Please download <a href="../materials/class15/class15.zip">Class 08 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class="text-smaller pad-left-lg"><code>fortune-teller/</code></p>
+						<p class=" pad-left-lg"><code>responsive-navbar/</code></p>
 						<p>3) Move the following into your homework directory:</p>
-						<p class="text-smaller pad-left-lg"><code>calculator-box/</code></p>
+						<p class=" pad-left-lg"><code>startup-matchmaker-responsive/</code></p> -->
+						<p>Please sync up with Github</p>
+						<p>We'll use files from Class 08 and Class 09 tonight</p>
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>Class #9 - 09/08/2016</h1>
-					<h1>jQuery (pt. 1)</h1>
+					<h1>Class 09 - 12/21/2016</h1>
+					<h2>Responsive Web Design (pt. 2)</h2>
+					<h2>And Working with Bootstrap</h2>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
+				<!-- <section class="center">
 					<h1>Announcements:</h1>
 
 					<div class="text-left">
 						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg">&rArr; Second deliverable due 09/15 (Thursday)</p>
-						<p class="pad-left-lg">&rArr; HTML/CSS Rough Draft</p>
-						<p>&#149; We're halfway there!</p>
-						<p class="pad-left-lg">&rArr; 11 more classes (including the last day - 10/27)</p>
-						<p class="pad-left-lg">&rArr; Take a minute and reflect</p>
-					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<!-- <section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section> -->
-
-				<!-- <section data-background="#FFF">
-					<h2 class="text-left">Questions</h2>
-					<hr>
-
-					<div class="text-left">
+						<p class="pad-left-lg text-smaller">&rArr; Milestone 4: Revised JS Draft - due Thursday 10/06</p> -->
+						<!-- <p class="pad-left-lg text-smaller">&rArr; Classes 18 and 19 (05/02 and 05/04): in-class project work</p> -->
+						<!-- <p>&#149; Office Hours:</p>
+						<p class="pad-left-lg text-smaller">&rArr; Dedicated Tuesday/Thursday Office Hours?</p>
+						<p class="pad-left-lg text-smaller">&rArr; Dedicated Sunday Office Hours?</p> -->
+						<!-- <p class="pad-left-lg text-smaller">&rArr; Outside lessons...?</p> -->
+						<!-- <p class="pad-left-lg text-smaller">&rArr; Final weekend office hours Sat/Sun (05/07 and (05/08)</p> -->
+						<!-- <p>&#149; Last Class on Monday, 010/13...14 days away!</p>
 					</div>
 				</section> -->
 
 				<!-- AGENDA -->
-				<section data-background="#FFF">
-					<h2 class="text-left">Agenda</h2>
+				<section class="text-left" data-background="#FFF">
+					<h3>Agenda</h3>
 					<hr>
 
-					<div class="text-left text-smaller">
-						<p>&#149; JavaScript Review</p>
-						<p>&#149; jQuery Intro:</p>
-						<p class="pad-left-lg ">&rArr; CSS Selectors</p>
-						<p class="pad-left-lg ">&rArr; HTML manipulation using <code>.html()</code></p>
-						<p class="pad-left-lg ">&rArr; The <code>.click()</code> method</p>
-						<p class="pad-left-lg ">&rArr; The <code>.val()</code> method</p>
-						<p class="pad-left-lg ">&rArr; Using jQuery and <code>$(document).ready()</code></p>
-						<p class="pad-left-lg ">&rArr; CSS manipulation using <code>.css()</code></p>
-						<p>&#149; Lab!</p>
+					<div class="text-smaller">
+						<p>&#149; Responsive Review</p>
+						<p>&#149; Responsive Navbar Tutorial</p>
+						<p>&#149; Em Typography</p>
+						<p>&#149; <code>&lt;meta&gt;</code> Tag</p>
+						<!-- <p>&#149; Responsive Startup Matchmaker Lab</p> -->
 					</div>
 				</section>
 
-				<!-- FORTUNE TELLER REVIEW -->
-				<!-- <section data-background="#FFF" class="text-left">
-					<h2> JavaScript Review</h2>
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="../img/main/questions.jpg">
+				</section>
+
+				<!-- REVIEW -->
+				<section class="center">
+					<h1>Review</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Responsive Web Design - Review</h3>
+					<hr>
+					<div class="fragment">
+						<p><u>RWD</u>:</p>
+						<p class="pad-left-lg text-smallest">Designing the optimal viewing experience no matter the device on which the site is being viewed</p>
+					</div>
+					<div class="fragment">
+						<p><u>Static vs. Fluid Layouts</u>:</p>
+						<p class="pad-left-lg text-smallest">Using %-based widths, margins, etc. instead of px-based</p>
+					</div>
+					<div class="fragment">
+						<p><u>Media Queries</u>:</p>
+						<p class="pad-left-lg text-smallest">Allow CSS rules targeted at specific variables, like screen-size</p>
+						<p class="pad-left-lg text-smallest">&#149; When <code>width &gt; 1000px</code> color text <span style="color:red;">red</span></p>
+						<p class="pad-left-lg text-smallest">&#149; When <code>width &lt; 1000px</code> color text <span style="color:blue;">blue</span></p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Browser-Width Media Queries</h3>
+					<hr>
+					<p>Within CSS Stylesheet:</p>
+<pre><code>
+	@media screen and (min-width: 1024px) {
+		color: red;
+	}
+
+</code></pre>
+					<p><u>Media Type:</u> <code class="fragment">screen</code></p>
+					<p class="fragment pad-left-lg">Only target devices with a viewable screen</p>
+					<p><u>Rule:</u> <code class="fragment">(mid-width: 1024px)</code></p>
+					<p class="fragment pad-left-lg">Only target windows larger than, or equal to, 1024px</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Media Queries - Additional Examples</h3>
+					<hr>
+					<p>Don't have to specify a media type:</p>
+<pre><code>
+	@media (min-width: 700px) { ... }
+
+</code></pre>
+					<p>Multiple rules:</p>
+<pre><code>
+	@media (min-width: 320px) and (max-width: 480px) { ... }
+
+</code></pre>
+					<p>&#149; These styles will only apply on devices between 320 and 480 pixels</p>
+				</section>
+
+				<!-- RESPONSIVE NAVBAR -->
+				<section class="center">
+					<h2>Responsive Navbar Tutorial</h2>
+					<p>Open <code>responsive-navbar/</code> in SublimeText</p>
+				</section>
+
+				<section class="center">
+					<h1>Three pillars of RWD:</h1>
+
+					<p style="text-decoration: line-through;">1. Fluid layout</p>
+					<p style="text-decoration: line-through;">2. Media queries</p>
+					<p>3. Em Typography</p>
+				</section>
+
+				<!-- EM TYPOGRAPHY -->
+				<section class="center">
+					<h1>Em Typography</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>EM ... What?</h3>
+					<hr>
+					<p>&#149; An <code>em</code> is a unit of measurement</p>
+					<p>&#149; Derived from print design</p>
+					<p>&#149; Based on the size of the letter "<code>M</code>"</p>
+					<p>&#149; Like pixels, they determine the size of elements on a web page</p>
+					<p>&#149; Unlike pixels, which are fixed, ems are relative to their <u>parent's</u> font-size</p>
+					<p>&#149; <a href="http://kevinperalta.com/playground/em_size.html">More Info</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>EM's</h3>
+					<hr>
+					<p>&#149; Repeat: em's are relative to their <u>parent's</u> font-size</p>
+					<p>&#149; <code>1em</code> === the inherited font size</p>
+					<div class="fragment">
+						<p>&#149; If a <code>&lt;div&gt;</code> has <code>font-size</code> of <code>16px</code>:</p>
+						<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>16px</code></p>
+						<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>32px</code></p>
+					</div>
+					<div class="fragment">
+						<p>&#149; If a <code>&lt;p&gt;</code> has <code>font-size</code> of <code>20px</code>:</p>
+						<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>20px</code></p>
+						<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>40px</code></p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>EM's</h3>
+					<hr>
+					<p>Example:</p>
+<pre><code>
+	body {
+		font-size: 20px;
+	}
+
+	div {
+		height: 5em; // 100px
+		width: 3em; // 60px
+		margin: 0.5em; // 10px
+		border: 0.05em; // 1px
+	}
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>EM's - General Guide Lines</h3>
 					<hr>
 					<div class="text-smallest">
-						<p>1. Open <code>fortune-teller/</code></p>
-						<p>2. Attach <code>.onclick</code> to <code>id="clickme"</code></p>
-						<p>3. This click event should trigger a function, <code>tellFortune</code></p>
-						<p>4. Use <code>document.getElementById()</code> with <code>.value</code> to capture the <code>&lt;input&gt;</code> and <code>&lt;select&gt;</code> values</p>
-						<p>5. Store these values using variables (eg <code>var hometown = ...</code>)</p>
-						<p>6. Use string concatenation to diplsay the following into <code>id="output"</code>:</p>
-						<p class="pad-left-lg"><code>"You will be a ___ linving in ___  married to ____ with ___ kids."</code></p>
+					<p>1. Set a font-size on the <code>&lt;body&gt;</code> using pixels:</p>
+<pre><code>
+	body {
+		font-size: 16px;
+	}
+
+</code></pre>
+					<p>2. Base other typography on ems:</p>
+<pre><code>
+	h1 {
+		font-size: 3em; // 48px
+	}
+
+	h2 {
+		font-size: 2em; // 32px
+	}
+
+</code></pre>
+					<p>3. Set <code>font-size</code> in media queries to be smaller:</p>
+<pre><code>
+	h1 {
+		font-size: 1.5em; // 32px;
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- META TAG -->
+				<section class="center">
+					<h1><code>&lt;meta&gt;</code> Tag</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3><code>&lt;meta&gt;</code> Tag</h3>
+					<hr>
+					<p>&#149; Mobile browsers render webpages in a window wider than the screen, the <u>viewport</u></p>
+					<p>&#149; This is why you often have to pinch, zoom, and pan to move around a mobile browser</p>
+					<p>&#149; To ensure that your site is actually being viewed at the width of the device, and not the viewport, use:</p>
+					<div class="text-smallest">
+<pre><code>
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3><code>&lt;meta&gt;</code> Tag</h3>
+					<hr>
+					<div class="text-smallest">
+<pre><code>
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+					</div>
+					<p><code>"width=device-width"</code></p>
+					<p class="pad-left-lg">Controls the size of the viewport; sets it to the device's width</p>
+					<p><code>"initial-scale=1"</code></p>
+					<p class="pad-left-lg">Controls the zoom level</p>
+				</section>
+
+				<!-- RULES OF THUMB -->
+				<section class="center">
+					<h1>Responsive Rules of Thumb</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Responsive Rules of Thumb</h3>
+					<hr>
+					<p>&#149; Use pixels for font size on <code>&lt;body&gt;</code> and other top-level elements (containers, wrappers, etc.)</p>
+					<p>&#149; Use percents for widths, margins, padding of of <u>major</u> layout elements</p>
+					<p>&#149; Use em's for typography: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.</p>
+					<p>&#149; Include the viewport <code>&lt;meta&gt;</code> in the <code>&lt;head&gt;</code></p>
+				</section>
+
+				<!-- RESPONSIVE STARTUP MATCHMAKER LAB -->
+				<!-- <section class="center">
+					<h2>Responsive Startup Matchmaker Lab</h2>
+					<p>Open <code>startup-matchmaker-responsive/</code> in SublimeText</p>
+				</section> -->
+
+
+				<!-- <section class="center">
+					<h1>HELLO</h1>
+					<div class="text-left text-smaller">
+						<p>1) Please download <a href="../materials/class18/class18.zip">Class 09 Starter Code</a></p>
+						<p>2) Move the following into your course work directory:</p>
+						<p class=" pad-left-lg"><code>bootstrap-example/</code></p>
+						<p class=" pad-left-lg"><code>google-maps-example/</code></p>
 					</div>
 				</section> -->
 
-				<!-- 7/6/16 
-				Trevor replaced fortune-teller exercise with lifetime-supply exercise
-				We didn't have a chance to get to lifetime-supply last week -->
-
 				<section class="center">
-					<h2>Exercise: Lifetime Supply</h2>
-					<div class="text-left">
-						<p class="text-smallest">Open <code>lifetime-supply/</code>; write JS for the following:</p>
-						<p class="text-smallest">1. Store your current age into a variable</p>
-						<p class="text-smallest">2. Store a maximum age into a variable</p>
-						<p class="text-smallest">3. Store a favorite drink (from a drop-down) into a variable</p>
-						<p class="text-smallest">4. Store an amount per day into a variable</p>
-						<p class="text-smallest">5. Calculate how many you would eat total for the rest of your life</p>
-						<p class="text-smallest">6. Output your results to the user</p>
+					<h1>Working with Bootstrap</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<!-- <section class="center">
+					<h2>Announcements:</h2>
+					<div class="text-left text-smaller">
+						<p>&#149; Final Projects:</p>
+						<p class="pad-left-lg">&rArr; Due 05/09 (Monday)</p>
+						<p>&#149; Office Hours:</p>
+						<p class="pad-left-lg">&rArr; Tuesday/Thursday: 6:15PM - 8:15PM</p>
+						<p class="pad-left-lg">&rArr; Saturday: TBD</p>
+						<p class="pad-left-lg">&rArr; Sunday: Maybe</p>
+						<p>&#149; Course Completion:</p>
+						<p class="pad-left-lg">&rArr; 80% of assignments must be completed</p>
+						<p class="pad-left-lg">&rArr; Accepting late assignments until Friday, 5/10</p>
 					</div>
-				</section>
+				</section> -->
 
-				<!-- JQUERY -->
-				<section class="center">
-					<img src="../img/class09/jquery-logo.png" alt="">
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery - What Is It?</h3>
+				<!-- <section class="text-left" data-background="#FFF">
+					<h3>Remaining Classes</h3>
 					<hr>
+
+					<p><u>05/04 - Wednesday</u>:</p>
+					<p class="pad-left-lg text-smaller">&rArr; Production-ready code</p>
+					<p class="pad-left-lg text-smaller">&rArr; Students' choice</p>
+					<p class="pad-left-lg text-smaller">&rArr; Final project work</p>
+					<p><u>05/09 - Monday</u>:</p>
+					<p class="pad-left-lg text-smaller">&rArr; Last class</p>
+					<p class="pad-left-lg text-smaller">&rArr; Final presentations</p>
+				</section> -->
+
+				<!-- AGENDA -->
+				<!-- <section data-background="#FFF" class="text-left">
+					<h3>Agenda</h3>
+					<hr>
+					<p>&#149; CSS Frameworks (Bootstrap)</p>
+					<p>&#149; Google Maps API</p>
+				</section> -->
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="../img/main/questions.jpg">
+				</section>
+
+				<!-- CSS FRAMEWORKS -->
+				<section class="center">
+					<h1>CSS Frameworks</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>CSS Frameworks</h3>
+					<hr>
+					<p><u>Framework</u>:</p>
 					<div class="text-smaller">
-						<p>&#149; jQuery <u>IS</u> JavaScript (<a href="https://code.jquery.com/jquery-2.2.2.js">source code</a>)</p>
-						<p>&#149; jQuery is a JavaScript library</p>
-						<p>&#149; A library is a collection of battle-tested functions that increase the speed/stability of development</p>
-						<p>&#149; Why reinvent the wheel? Use a library instead!</p>
-						<p>&#149; 1000's of JS libraries, and (for better, or worse) growing:</p>
-						<p class="pad-left-lg">&rArr; Angular</p>
-						<p class="pad-left-lg">&rArr; Backbone</p>
-						<p class="pad-left-lg">&rArr; React</p>
-						<p class="pad-left-lg">&rArr; Underscore</p>
+					<p>&#149; Standardized approach for solving common problems</p>
+					<p>&#149; Pre-packaged code used to support the development of website</p>
+					<p>&#149; Goals:</p>
+					<p class="pad-left-lg">&rArr; Provide a common structure (boilerplate)</p>
+					<p class="pad-left-lg">&rArr; Eliminate repetitive work</p>
+					<p class="pad-left-lg">&rArr; Speed development process</p>
 					</div>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<h3 >jQuery - What Is It?</h3>
+				<section class="text-left" data-background="#FFF">
+					<h3>CSS Frameworks</h3>
 					<hr>
-					<p>&#149; Written by John Resig (lives in BK!)</p>
-					<p>&#149; jQuery's Motto: <u>'Write Less, Do More'</u></p>
-					<p>&#149; tl;dr makes working with JS easier:</p>
-					<p class="pad-left-lg">&rArr; HTML / CSS manipulation</p>
-					<p class="pad-left-lg">&rArr; Event handling (click events)</p>
-					<p class="pad-left-lg">&rArr; Animations</p>
-					<p class="pad-left-lg">&rArr; AJAX</p>
-					<p>&#149; Bonus: Covers JS's browser inconsistencies</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery - Why do we use it?</h3>
-					<hr>
-
-					<p>Pure JavaScript:</p>
-					<p><a href="http://codepen.io/josephjbliss/pen/uqdCw">http://codepen.io/josephjbliss/pen/uqdCw</a></p>
-					<p>jQuery:</p>
-					<p><a href="http://codepen.io/josephjbliss/pen/jLtfC">http://codepen.io/josephjbliss/pen/jLtfC</a></p>
-				</section>
-
-				<section class="center">
-					<h1>jQuery in Two Steps:</h1>
-					<div class="text-left">
-						<p>1) Use jQuery's powerful CSS selector to select which HTML elements you want to manipulate</p>
-<pre><code>
-	$('#some-el')
-
-</code></pre>
-						<p>2) Call jQuery methods on the above selector:</p>
-<pre><code>
-	$('#some-el').css('background', 'blue');
-
-</code></pre>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>jQuery CSS Selectors</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery CSS Selectors - $('x') function</h3>
-					<hr>
-
+					<p><u>Front End Framework</u>:</p>
 					<div class="text-smaller">
-						<p>&#149; CSS selectors query HTML for certain elements</p>
-						<p>&#149; Similar to <code>document.getElementById()</code></p>
-						<p>&#149; Use the same selectors you write in CSS!</p>
-						<hr>
-						<p>&#149; The <code>$('x')</code> Function - Get all of the 'X'</p>
-<pre><code>
-	$('div') // select all &lt;div&gt;'s
-	$('h2') // select all &lt;h2&gt;'s
-	$('p a') // select all &lt;a&gt;'s inside of all &lt;p&gt;'s
-	$('p, a') // select all &lt;p&gt;'s and &lt;a&gt;'s
-
-</code></pre>
-						<p>&#149; <code>The $('x')</code> function takes <u>ANY</u> CSS selector</p>
+						<p>&#149; Files and folders of standardized code (HTML/CSS/JS)</p>
+						<p>&#149; Typography and pre-built styles for HTML elements</p>
+						<p>&#149; CSS grid for developing a responsive layout</p>
+						<p>&#149; Solutions to cross-browser compatibility issues</p>
+						<p>&#149; JS library for UI/UX interactions (dropdowns/carousels/etc.)</p>
 					</div>
 				</section>
 
-				<section data-background="#FFF">
-					<h3 class="text-left">jQuery CSS Selectors - ID's and Classes</h3>
+				<section class="text-left" data-background="#FFF">
+					<h3>CSS Frameworks</h3>
 					<hr>
-
-					<div class="text-left">
-						<p>Fetch ID's using the # (hashtag):</p>
-<pre><code>
-	$('#someId')
-	$('#someId a')
-
-</code></pre>
-						<hr>
-						<p>Fetch Classes using the . (period):</p>
-<pre><code>
-	$('.someClass')
-	$('.someClass a')
-
-</code></pre>
-						<p class="text-smallest">&#149; Using <code>$('.someClass')</code> returns ALL of the HTML elements with a class of <code>.someClass</code></p>
+					<p>Two types of framework:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>1) Grid/Layouts - Simple:</p>
+						<p class="pad-left-lg">&rArr; <a href="http://960.gs/">960 Grid System</a></p>
+						<p class="pad-left-lg">&rArr; <a href="http://daneden.github.io/Toast/">Toast</a></p>
+						<p class="pad-left-lg">&rArr; <a href="http://getbase.org/">Base</a></p>
+						<p>2)	 Complete - Complex:</p>
+						<p class="pad-left-lg">&rArr; <a href="http://getbootstrap.com/">Bootstrap</a></p>
+						<p class="pad-left-lg">&rArr; <a href="http://foundation.zurb.com/">(Zurb) Foundation</a></p>
+						<p class="pad-left-lg">&rArr; <a href="http://getskeleton.com/">Skeleton</a></p>
 					</div>
 				</section>
 
-				<section data-background="#FFF"  class="text-left">
-					<h3>jQuery CSS Selectors - $()</h3>
+				<section class="text-left" data-background="#FFF">
+					<h3>CSS Frameworks - Selecting a Framework</h3>
 					<hr>
-
-					<div>
-						<p><code>$()</code> - the almighty selector!</p>
-						<hr>
-						<p class="text-smaller"><code>$('div')</code></p>
-						<p class="fragment text-smallest pad-left-lg">&rArr; Select all HTML <code>div</code> elements</p>
-						<p class="text-smaller"><code>$('#someId')</code></p>
-						<p class="fragment text-smallest pad-left-lg">&rArr; Selects the first HTML with an ID of "<code>someId</code>"</p>
-						<p class="text-smaller"><code>$('.someClass')</code></p>
-						<p class="fragment text-smallest pad-left-lg">&rArr; Select all the HTML elements with class "<code>someClass</code>"</p>
-						<p class="text-smaller"><code>$('ul li a.social-link')</code></p>
-						<p class="fragment text-smallest pad-left-lg">&rArr; Select anchor tags with class "<code>social-link</code>" that are nested inside <code>&lt;li&gt;</code> elements which are nested inside <code>&lt;ul&gt;</code></p>
-					</div>
+					<p>Rule of thumb:</p>
+					<p class="pad-left-lg">&rArr; The more stylistically complex (the more custom CSS you will be writing), the less complex of a framework you will need</p>
+					<p>As with plugins:</p>
+					<p class="pad-left-lg">&rArr; Open source</p>
+					<p class="pad-left-lg">&rArr; Recently updated</p>
+					<p class="pad-left-lg">&rArr; Community of active contributors</p>
+					<p class="pad-left-lg">&rArr; Well-documented</p>
 				</section>
 
+				<section class="text-left" data-background="#FFF">
+					<h3>CSS Frameworks - Pros/Cons</h3>
+					<hr>
+					<p>Pros:</p>
+					<p class="pad-left-lg text-smaller">&rArr; Major increase in speed of development</p>
+					<p class="pad-left-lg text-smaller">&rArr; Solutions to common problems already built</p>
+					<p class="pad-left-lg text-smaller">&rArr; Cross-browser compatibility</p>
+					<p>Cons:</p>
+					<p class="pad-left-lg text-smaller">&rArr; Reliance (you will un-learn CSS!)</p>
+					<p class="pad-left-lg text-smaller">&rArr; Dependence - what if you want to switch frameworks?</p>
+					<p class="pad-left-lg text-smaller">&rArr; Bloat - unused framework code</p>
+					<p class="pad-left-lg text-smaller">&rArr; <a href="http://adventurega.me/bootstrap/">Identical/similar-looking/clones</a></p>
+				</section>
+
+				<!-- BOOTSTRAP -->
 				<section class="center">
-					<h1>HTML Manipulation</h1>
+					<h1>Bootstrap</h1>
 				</section>
 
-				<!-- HTML Manipulation -->
-				<section data-background="#FFF"  class="text-left">
-					<h3>jQuery HTML Manipulation</h3>
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - What is it?</h3>
 					<hr>
-					<div>
-						<p><code>.html()</code></p>
-						<p class="text-smallest pad-left-lg">Will return any HTML inside the selected element:</p>
-<pre><code>
-	$('#someId').html()
+					<p>In their own words:</p>
+					<blockquote>"Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web."</blockquote>
+				</section>
 
-</code></pre>
-						<p><code>.html('&lt;h1&gt;a heading&lt;/h1&gt;')</code></p>
-						<p class="text-smallest pad-left-lg">Inserts and overwrites the HTML inside the selected element:</p>
-<pre><code>
-	$('#someId').html('<h1>a heading</h1>')
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - What is it?</h3>
+					<hr>
+					<p>&#149; Best thing to come out of Twitter</p>
+					<p>&#149; OG built by <a target="_blank" href="https://twitter.com/mdo">@mdo</a> and <a target="_blank" href="https://twitter.com/fat">@fat</a></p>
+					<p>&#149; CSS framework (with HTML and JS components)</p>
+					<p>&#149; Collection of CSS styles for common UI <a target="_blank" href="http://getbootstrap.com/components/">components</a>:</p>
+					<p class="pad-left-lg text-smallest">&rArr; Navbars</p>
+					<p class="pad-left-lg text-smallest">&rArr; Buttons</p>
+					<p class="pad-left-lg text-smallest">&rArr; Forms</p>
+					<p class="pad-left-lg text-smallest">&rArr; Image Carousels</p>
+					<p>&#149; Notable for its responsive <a target="_blank" href="http://getbootstrap.com/css/#grid">grid</a> layout</p>
+				</section>
 
-</code></pre>
-						<p>&#149; Use instead of the <code>.innerHTML</code> JavaScript method</p>
-
-
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - What is it?</h3>
+					<hr>
+					<div class="text-center">
+						<img src="../img/class18/bootstrap-files.png" alt="">
 					</div>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery HTML Manipulation</h3>
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - The Grid</h3>
 					<hr>
-					<p><code>.text()</code></p>
-					<p class="pad-left-lg text-smaller">Returns any text inside the selected element</p>
-<pre><code>
-	$('#someId').text()
+					<p>Core CSS Classes:</p>
 
-</code></pre>
-					<p><code>.text('some string')</code></p>
-					<p class="pad-left-lg text-smaller">Overwrites any text (or HTML!) inside the selected element</p>
-<pre><code>
-	$('#someId').text('some text!')
+					<p><code>&lt;container&gt;</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; Top-level element; holds all other code</p>
 
-</code></pre>
+					<p><code>&lt;row&gt;</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; Horiztonal row used to hold <code>col</code>'s</p>
+					<p class="pad-left-lg text-smaller">&rArr; Must be children of <code>container</code>'s</p>
+
+					<p><code>&lt;col&gt;</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; Used to hold content (text/images/etc.)</p>
+					<p class="pad-left-lg text-smaller">&rArr; Must be immediate children of <code>row</code>'s</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - The Grid</h3>
+					<hr>
+					<img src="../img/class18/bootstrap-12-grid.png" alt="">
+					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - Columns</h3>
+					<hr>
+					<p>&#149; Bootstrap's grid is divided into 12 columns</p>
+					<p>&#149; Columns are created using CSS classes</p>
+					<p>&#149; Build columns using the following formula:</p>
+					<p class="pad-left-lg"><code>col-{screen-size}-{width}</code></p>
+					<p><code>&lt;div class="col-md-6"&gt;</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; A div for medium-sized screens that is 6-columns wide</p>
+					<p><code>&lt;div class="col-xs-2"&gt;</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; A div for x-small screens that is 2-columns wide</p>
+					<p></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - Two 50%-width columns</h3>
+					<hr>
+					<img src="../img/class18/bootstrap-2-col.png" alt="">
+					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - Two 50%-width columns</h3>
+					<hr>
+					<pre><code>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6">Content here</div>
+								<div class="col-md-6">Content here</div>
+							</div>
+						</div>
+
+					</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - Four 25%-width columns</h3>
+					<hr>
+					<img src="../img/class18/bootstrap-4-col.png" alt="">
+					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Bootstrap - Four 25%-width columns</h3>
+					<hr>
+					<pre><code>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-3">Content here</div>
+								<div class="col-md-3">Content here</div>
+								<div class="col-md-3">Content here</div>
+								<div class="col-md-3">Content here</div>
+							</div>
+						</div>
+
+					</code></pre>
 				</section>
 
 				<section class="center">
 					<h1>Codealong</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101</a></p>
-				</section>
-
-				<!-- CLICK EVENT -->
-				<section class="center">
-					<h1>Click Event</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery Click Event - Named Functions</h3>
-					<hr>
-					<p>JavaScript:</p>
-<pre><code>
-	document.getElementById('someId').onclick = someFunction
-
-	function someFunction () {
-		// do something
-	}
-
-</code></pre>
-					<p>jQuery</p>
-<pre><code>
-	$('#someId').click(someFunction)
-
-	function someFunction () {
-		// do something
-	}
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>jQuery Click Event - Anonymous Functions</h3>
-					<hr>
-					<p>JavaScript:</p>
-<pre><code>
-	document.getElementById('someId').onclick = function () {
-		// do something
-	}
-
-</code></pre>
-					<p>jQuery</p>
-<pre><code>
-	$('#someId').click(function () {
-		// do something
-	})
-
-</code></pre>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101</a></p>
-				</section>
-
-				<!-- INPUTS AND .val() -->
-				<section class="center">
-					<h1>&lt;input&gt; and .val()</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>&lt;input&gt; and .val()</h3>
-					<hr>
-					<p>JavaScript:</p>
-<pre><code>
-	document.getElementById('someId').value
-	// returns the value inside fo someId
-
-</code></pre>
-					<p>jQuery:</p>
-<pre><code>
-	$('#someId').val()
-	// returns the value inside of someId
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>&lt;input&gt; and .val()</h3>
-					<hr>
-					<p>&#149; Getting values, use <code>.val()</code></p>
-<pre><code>
-	$('#someId').val()
-	// returns the value inside of someId
-
-</code></pre>
-					<p>&#149; Setting values, use <code>.val('some text')</code></p>
-
-<pre><code>
-	$('#someId').val('some text')
-	// sets the value of someId to 'some text'
-
-</code></pre>
-					<p><code>.val()</code> can be used on both &lt;input&gt; and &lt;select&gt; elements</p>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong</h1>
-					<a href="http://codepen.io/cheshireoctopus/pen/JYqvqW?editors=101">http://codepen.io/cheshireoctopus/pen/JYqvqW?editors=101</a>
-				</section>
-
-				<section class="center">
-					<h1>Using jQuery</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>Using jQuery</h3>
-					<hr>
-					<p>Option 1: Download and store jQuery locally</p>
-					<p class="pad-left-lg text-smallest">1. Download jQuery from <a href="http://jquery.com/download">http://jquery.com/download</a></p>
-					<p class="pad-left-lg text-smallest">2. Save the <code>.js</code> file in your project's <code>js/</code> directory</p>
-					<p class="pad-left-lg text-smallest">3. Create a <code>&lt;script&gt;</code> tag <u>ABOVE</u> any of your own JS files</p>
-<pre><code>
-	&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="project.js"&gt;&lt;/script&gt;
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>Using jQuery</h3>
-					<hr>
-					<div>
-						<p>Option 2: Link to an external jQuery source (CDN)</p>
-						<p class="pad-left-lg text-smallest">1. Locate an externally hosted version of jQuery:</p>
-						<p class="pad-left-lg text-smallest">&rArr; <a href="https://code.jquery.com/jquery-1.11.3.js">https://code.jquery.com/jquery-1.11.3.js</a></p>
-						<p class="pad-left-lg text-smallest">2. Create a <code>&lt;script&gt;</code> tag <u>ABOVE</u> any of your own JS files</p>
-						<p class="pad-left-lg text-smallest">3. Point the <code>src</code> attribute to the jQuery CDN</p>
-
-<pre><code>
-&lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="project.js"&gt;&lt;/script&gt;
-
-</code></pre>
-					</div>
-				</section>
-
-				<section data-background="#FFF"  class="text-left">
-					<h3>Using jQuery - Script placement</h3>
-					<hr>
-					<p><code>&lt;script&gt;</code> tags should always be placed:</p>
-					<p class="pad-left-lg">&#149; at the <u>BOTTOM</u> of your &lt;body&gt;</p>
-					<p class="pad-left-lg">&#149; right before the closing &lt;/body&gt; tag</p>
-					<p>Why:</p>
-					<div class="fragment">
-						<p class="pad-left-lg">&#149; As your JS will reference DOM elements, these elements have to be loaded first!</p>
-						<p class="pad-left-lg">&#149; By placing <code>&lt;script&gt;</code> tags at the <u>BOTTOM</u>, the browser will load these <code>&lt;script&gt;</code>'s LAST!</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h3 class="text-left">Using jQuery - $(document).ready()</h3>
-
 					<div class="text-left">
-						<p class="text-smallest">Best practice is to write jQuery using the <code>$(document).ready()</code> function:</p>
-
-<pre><code>
-	$(document).ready(function() {
-
-		// WRITE OTHER CODE HERE!!
-
-	})
-
-</code></pre>
-						<p class="text-smallest">&#149; Tells jQuery to wait until HTML/CSS have loaded before executing any JavaScript</p>
-						<p class="text-smallest">&#149; Only execute code once the document (DOM) is ready</p>
+						<p>&#149; Open <code>bootstrap-example/</code> in Sublime Text</p>
+						<p>&#149; Navigate to <code>grid-practice.html</code></p>
 					</div>
 				</section>
 
 				<section class="center">
-					<h3>Rebuild Fortune Teller using jQuery</h3>
-					<div class="text-left text-smallest">
-						<p>1. Include jQuery using CDN or local (downloaded version)</p>
-						<p>2. Re-write JS using jQuery:</p>
-						<p class="pad-left-lg">&rArr; Replace <code>document.getElementById()</code> with <code>$()</code> selectors</p>
-						<p class="pad-left-lg">&rArr; Replace <code>.onclick</code> with <code>.click()</code></p>
-						<p class="pad-left-lg">&rArr; Replace <code>.value</code> with <code>.val</code></p>
-						<p class="pad-left-lg">&rArr; Replace <code>.innerHTML</code> with <code>.html()</code> or <code>.text()</code></p>
-						<p>3. Make sure to use:</p>
-<pre><code>
-	$(document.ready(function () {
-
-		// Your code here
-
-	})
-
-</code></pre>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>CSS Manipulation</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>CSS Manipulation - .css()</h3>
-					<hr>
-					<p>JavaScript:</p>
-<pre><code>
-	document.getElementById('someId').style.color = 'red'
-
-</code></pre>
-					<p>jQuery:</p>
-<pre><code>
-	$('#someId').css('color', 'red')
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<h3>CSS Manipulation - .css()</h3>
-					<hr>
-					<p class="text-smallest">&#149; Set Single Property: <code>.css(propertyName, value)</code>:</p>
-<pre><code>
-	$('p').css('background-color', 'pink')
-
-</code></pre>
-					<p class="text-smallest">&#149; Set Multiple Properties: <br> <code>.css({ property1: value1, property2: value2 })</code></p>
-<pre><code>
-	$('#someId').css({ 'height': '100px', 'width': '100px' })
-
-</code></pre>
-					<p class="text-smallest">&#149; Get Property: <code>.css(propertyName)</code></p>
-<pre><code>
-	$('#someId').css('height')
-
-</code></pre>
-				</section>
-
-				<section class="center">
-					<h2>Lab/HW: Calculator Box</h2>
-					<div class="text-left text-smallest">
-						<p>1. Open <code>calculator-box/</code> in SublimeText</p>
-						<p>2. Add a <code>&lt;script&gt;</code> tag for jQuery</p>
-						<p>2. Build the following behaviors:</p>
-						<p class="pad-left-lg">&#149; Clicking on a plus box adds to the total in the center</p>
-						<p class="pad-left-lg">&#149; Clicking on a minus box subtracts from the total</p>
-						<p class="pad-left-lg">&#149; Clicking the red box makes the background of the center box to red</p>
-						<p class="pad-left-lg">&#149; Clicking the blue box makes the background of the center box to blue</p>
-						<p class="pad-left-lg">&#149; Clicking the center box will make its background white and reset the value inside to zero</p>
-						<p>3) If you're feeling ambitious, think about how to make your code more efficient; in other words, remove redundant code</p>
-					</div>
-				</section>
-
-<!-- 				<section class="center">
-					<h1>Homework</h1>
+					<h1>Exercises</h1>
 					<div class="text-left">
-						<p>1. Finish calculator box</p>
-						<p>2. Online dating profile:</p>
-						<p class="text-smallest pad-left-lg">&rArr; Create an online dating profile for your favorite fictional character</p>
-						<p class="text-smallest pad-left-lg">&rArr; Be sure to utilize floats/clears</p>
-						<p class="text-smallest pad-left-lg">&rArr; Include jQuery and at least one <code>.click()</code> event</p>
+						<p>&#149; Open <code>layout-challenge.pdf</code></p>
+						<p>&#149; Build the first three challenges using Boostrap:</p>
+						<p class="pad-left-lg">&rArr; <code>two-column.html</code></p>
+						<p class="pad-left-lg">&rArr; <code>three-column.html</code></p>
+						<p class="pad-left-lg">&rArr; <code>simple-marketing.html</code></p>
 					</div>
-				</section> -->
+				</section>
 
 				<!-- THE END -->
 				<section class="center">
@@ -563,6 +574,11 @@
 
 				<section class="center">
 					<h1>Exit Tickets!</h1>
+				</section>
+
+				<section class="center">
+					<h1>Enjoy the break!</h1>  
+					<h1>See you in January!</h1>
 				</section>
 			</div>
 		</div>
@@ -583,7 +599,7 @@
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },

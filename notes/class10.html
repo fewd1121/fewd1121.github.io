@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>FEWD - Class 10</title>
+		<title>FEWD - Class 14</title>
 		<link rel="stylesheet" href="../css/reveal.css">
 		<link rel="stylesheet" href="../css/theme/general-assembly.css" id="theme">
 
@@ -27,10 +27,15 @@
 	<body>
 
 		<!--
-			Lesson 10 - jQuery (pt. 2)
+			Lesson 08 - JavaScript (pt. 1)
 
 			Learning Objectives:
-
+			- Identify JavaScript's capabilities
+			- Understand why developers use pseudo code
+			- Describe two JavaScript data types: strings and numbers
+			- Use variables to store/retrieve data
+			- Introduction to JavaScript functions
+			- Introduction to document.getElementById()
 		-->
 
 		<div class="reveal">
@@ -39,51 +44,34 @@
 					<h1>HELLO</h1>
 
 					<div class="text-left">
-						<p>1) Please download <a href="../materials/class10/class10.zip">Class 10 Starter Code</a></p>
+						<p>1) Please download <a href="../materials/class07/class07.zip">Class 14 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>jquery-review/</code></p>
-						<p class=" pad-left-lg"><code>jquery-city/</code></p>
-						<p class=" pad-left-lg"><code>accordian/</code></p>
-						<p>3) Make sure you HW is pushed up!</p>
+						<p class="pad-left-lg">&#149; <code>first-javascript/</code></p>
+						<p>3) Last class's solution:</p>
+						<p class="pad-left-lg">&#149; <code>startup-matchmaker-solution/</code></p>
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>Class #10 - 09/13/2016</h1>
-					<h2>jQuery (pt. 2) - DOM Manipulation</h2>
+					<h1>Class #7 - 09/01/2016</h1>
+					<h1>Intro to Programming</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
+				<!-- <section class="center">
 					<h1>Announcements:</h1>
 
 					<div class="text-left">
-						<p>&#149; Final Projects - Milestone 2 - due 09/20 (Tuesday)</p>
-						<p class="pad-left-lg">&rArr; HTML rough draft</p>
-						<p class="pad-left-lg">&rArr; CSS rough draft</p>
+						<p>&#149; Final Projects! First deliverable due 03/28 (Monday)</p>
+						<p class="pad-left-lg">&rArr; Project Proposal & Wireframes</p>
+						<p>&#149; GA is buying us drinks! Tonight!</p>
 					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<!-- <section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
 				</section> -->
 
-				<section data-background="#FFF" class="text-left">
-					<h2>Questions</h2>
-					<hr>
-
-					<p class="text-smaller fragment"><b>Q: Best practice to use jQuery over JavaScript if it results in cleaner code?</b></p>
-					<div class="fragment text-smallest">A: It depends...
-						<p class="pad-left-lg">&rArr; jQuery is a tool with a specific use case: making it easier to work with the DOM.</p>
-						<p class="pad-left-lg">&rArr; As the developer, it's up to you to select the proper tools to solve the problem.</p>
-						<p class="pad-left-lg">&rArr; Remember: JS and jQuery aren't mutually exclusive - you will use the two together (afterall, jQuery <u>IS</u> JavaScript).</p>
-					</div>
-					<!-- <p class="text-smaller fragment"><b>Q: What does <code>.innerHTML</code> do?</b></p>
-					<p class="text-smallest fragment">A: Used to access the HTML and text inside of a particular HTML element</p>
-					<p class="text-smaller fragment"><b>Q: Why is CSS loaded before <code>&lt;body&gt;</code>, but not JS</b></p>
-					<p class="text-smallest fragment">A: tl;dr it's how web browsers function (see <code>test/</code> example)</p> -->
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="../img/main/questions.jpg">
 				</section>
 
 				<!-- AGENDA -->
@@ -92,399 +80,525 @@
 					<hr>
 
 					<div class="text-smaller">
-						<p>&#149; jQuery Review</p>
-						<p>&#149; Toggling element visibility (hide vs. show)</p>
-						<p>&#149; Anonymous vs. Named functions</p>
-						<p>&#149; Manipulating element attributes using <code>.attr()</code></p>
-						<p>&#149; <code>$(this)</code></p>
-						<p>&#149; Document Traversal</p>
+						<p>&#149; Review Startup Matchmaker</p>
+						<p>&#149; What is JavaScript and what can it do?</p>
+						<p>&#149; How to think programatically</p>
+						<p>&#149; Pseudo Code</p>
+						<p>&#149; JS Basics:</p>
+						<p class="pad-left-lg">&rArr; Data Types</p>
+						<p class="pad-left-lg">&rArr; Variables</p>
+						<p class="pad-left-lg">&rArr; Functions</p>
+						<p>&#149; <code>document.getElementById()</code> - maybe...</p>
 					</div>
 				</section>
 
-				<!-- JQUERY REVIEW -->
+				<!-- REVIEW: STARTUP MATCHMAKER -->
+				<!-- <section class="center">
+					<h1>Review Startup Matchmaker</h1>
+				</section> -->
+
+				<!-- INTRO TO JAVASCRIPT -->
 				<section class="center">
-					<h1>jQuery Review</h1>
+					<h1>Intro To JavaScript</h1>
+					<p>Hold on to your hats...</p>
+				</section>
+
+				<section class="center">
+					<img src="../img/class07/roller-coaster.png">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>JavaScript: History</h2>
+					<hr>
+
+					<p>&#149; JavaScript &ne; Java</p>
+					<p>&#149; Born in 1995 - created in 10 days by Brendan Eich</p>
+					<p>&#149; JavaScript is one of the most <a href="http://githut.info/">popular languages</a></p>
+					<p>&#149; Attwood's Law &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
+				</section>
+
+				<section class="center">
+					<h1>What Can JS Do In the Browser?</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>Javascript: What Can It Do?</h2>
+					<hr>
+
+					<p>Most uses of JavaScript fall into four categories:</p>
+					<div class="pad-left-lg">
+						<p>1) Responding to user actions (events)</p>
+						<p>2) Changing HTML Content</p>
+						<p>3) Changing CSS Styles</p>
+						<p>4) Loading/sending data to and from the server</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2 class="text-left">JavaScript: What Can It Do?</h2>
+					<hr>
+					<p>A few examples:</p>
+					<div class="pad-left-lg">
+						<p>&#149; Adding / Removing Elements</p>
+						<p>&#149; Animating content</p>
+						<p>&#149; Changing CSS "on-the-fly"</p>
+						<p>&#149; Detecting user interactions</p>
+						<p>&#149; Form validation</p>
+						<p>&#149; Loading dynamic content</p>
+					</div>
+				</section>
+
+
+
+				<section data-background="#FFF" class="text-left">
+					<h2>Javascript vs HTML + CSS?</h2>
+					<hr>
+					<h3>HTML/CSS</h3>
+					<p>&#149; HTML/CSS are used to define <u>initial</u> page state</p>
+					<p>&#149; HTML/CSS are (mostly) <u>static</u></p>
+					<h3>JS</h3>
+					<p>&#149; JS is used to define how page state can <u>change</u></p>
+					<p>&#149; JS is <u>dynamic</u></p>
+				</section>
+
+				<!-- INTRO TO PROGRAMMING -->
+				<section class="center">
+					<h1>Intro To Programming</h1>
+					<!-- <p>Next stop: 1337 h4x0r</p> -->
+					<img src="../img/class07/intro-to-programming.jpg" height="500px">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>Intro to Programming</h2>
+
+					<hr>
+
+					<p><b>Q:</b> What is a program?</p>
+					<p class="fragment text-smaller pad-left-lg">&rArr; A program is a set of instructions that tells a computer how to carry-out a task</p>
+					<p><b>Q:</b> What is programming?</p>
+					<p class="fragment text-smaller pad-left-lg">&rArr; Programming is the task of writing those instructions in a language that the computer can understand</p>
+					<p><b>Q:</b> How do I become a programmer?</p>
+					<p class="fragment text-smaller pad-left-lg">&rArr; Not by learning a particular language, but by learning how to think like a computer</p>
+				</section>
+
+				<section class="center">
+					<h1>Think like a computer</h1>
+					<p>10101010100101010</p>
+				</section>
+
+				<section class="center">
+					<h1>Close your laptops</h1>
+					<p>Seriously.</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>Think like a CPU - What did we learn?</h2>
+					<hr>
+
+					<p>&#149; You have to speak the same language</p>
+					<p>&#149; Steps execute sequentially</p>
+					<p>&#149; Steps need to granular and precise</p>
+					<p>&#149; The computer will only do what you tell it to do</p>
+					<p>&#149; The computer is never wrong</p>
+				</section>
+
+				<section class="center">
+					<h1>Pseudo Code</h1>
+					<p>Like code, but not...</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>Pseudo Code</h2>
+					<hr>
+
+					<p>&#149; <b>Pseudo Code</b>:</p>
+					<p class="pad-left-lg text-smaller">&rArr; The process of thinking through a program, step-by-step, without actually writing a line of code</p>
+					<p class="pad-left-lg text-smaller">&rArr; A written outline of a program that can be converted into code</p>
+					<p class="pad-left-lg text-smaller">&rArr; Allows the programmer to focus on problem solving, not the precise layout of the code and its syntax</p>
+					<p class="pad-left-lg text-smaller">&rArr; Don't need to know how to code, to write pseudo code!</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Pseudo Code</h2>
+					<hr>
+
 					<div class="text-left">
-						<p>1. Open <code>jquery-review/</code> in Sublime Text</p>
-						<p>2. Read <code>instructions.txt</code></p>
+						<p>&#149; Let's write pseudo code for a thermostat</p>
+						<p>&#149; Things to think about:</p>
+						<p class="pad-left-lg">&rArr; What is <u>goal</u> of our program? What are we trying to solve?</p>
+						<p class="pad-left-lg">&rArr; What are the <u>inputs</u> for our program? What pieces of data will be going into it?</p>
+						<p class="pad-left-lg">&rArr; What is the desired <u>output</u> of our program? Once the program runs, what should happen?</p>
 					</div>
 				</section>
 
-				<!-- TOGGLING ELEMENT VISIBILITY -->
-				<section class="center">
-					<h1>Toggling Element Visibility</h1>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show</h3>
+				<section data-background="#FFF">
+					<h2 class="text-left">Pseudo Code</h2>
 					<hr>
-						<p><code>.hide()</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their inline style to <code>display: none;</code></p>
-<pre><code>
-	$('p').hide()
 
-</code></pre>
-						<p><code>.show()</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; Reveals elements by setting their inline style to <code>display: block</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; If the element was originally <code>inline</code>, then <code>display: inline</code> will be used</p>
-<pre><code>
-	$('p').show()
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show (ctn)</h3>
-					<hr>
-						<p>&#149; Change the duration by passing an argument</p>
-						<p class="pad-left-lg">&rArr; String:</p>
-<pre><code>
-	$('p').hide('slow')
-
-	$('p').show('fast')
-
-</code></pre>
-						<p class="pad-left-lg">&rArr; Number:</p>
-<pre><code>
-	$('p').hide(700)
-
-	$('p').show(300)
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show Alternatives</h3>
-					<hr>
-					<p><code>.fadeIn()</code></p>
-					<p><code>.fadeOut()</code></p>
-					<p><code>.slideDown()</code></p>
-					<p><code>.slideUp()</code></p>
-					<p><code>.slideToggle()</code></p>
-					<hr>
-					<p>&#149; Each take a <code>duration</code> argument:</p>
-<pre><code>
-	$('p').fadeIn('fast')
-
-	$('p').slideUp(900)
-
-</code></pre>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong</h1>
-					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101">http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101</a></p>
-				</section>
-
-				<!-- ANONYMOUS FUNCTIONS -->
-				<section class="center">
-					<h1>Anonymous Functions</h1>
-					<img src="../img/class10/anonymous.png" alt="">
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions Review</h2>
-					<hr>
-					<p>So far, we've been writing and calling functions like this:</p>
-<pre><code>
-	// Event handler responsible for calling the function
-	$('button').click(someFunctionName)
-
-	// The Actual Function
-	function someFunctionName () {
-		// Do something here
-	}
-
-</code></pre>
-					<p>&#149; This is an example of a <u>named</u> function</p>
-					<p>&#149; The function's name is <code>someFunctionName</code></p>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions Review</h2>
-					<hr>
-					<p>&#149; Named Functions:</p>
-<pre><code>
-	function doSomething () {
-		// run some code...
-	}
-
-</code></pre>
-					<p>&#149; Anonymous Functions:</p>
-<pre><code>
-	function () {
-		// run some code...
-	}
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions</h2>
-					<hr>
-					<div class="text-smallest">
-						<p>&#149; Many commands, especially events,  expect a function as an argument:</p>
-<pre><code>
-	$('button').click(someFunction)
-
-	function someFunction () {
-		// Do something here
-	}
-
-</code></pre>
-						<p>&#149; Anonymous functions let us use a function without naming and separately defining it:</p>
-<pre><code>
-	$('button').click(function () {
-		// Do something here
-	})
-
-</code></pre>
-						<p>&#149; This makes anonymous functions good for events: <code>.click()</code>, <code>.keyup()</code>, <code>.mouseover()</code>, etc.</p>
-						<p>&#149; NOTE: anonymous functions only exist when that bit of code is running</p>
+					<div class="text-left text-smaller">
+						<p><code>determine target_temperature</code></p>
+						<p><code>target_temperature = 72</code></p>
+						<p><code>get current_temperature</code></p>
+						<p><code>current_temperature = 68</code></p>
+						<p><code>if current_temperature < target_temperature</code></p>
+						<p class="pad-left-lg"><code>turn_heater_up</code></p>
+						<p><code>if current_temperature >= target_temperature</code></p>
+						<p class="pad-left-lg"><code>turn_heater_off</code></p>
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>CodeAlong</h1>
-					<p>Update Hide/Show Keanu to use anonymous functions</p>
+					<h1>Working Locally With JavaScript</h1>
+					<p>Like my JavaScript? It's local...no big deal.</p>
 				</section>
 
-				<!-- MANIPULATING ATTRIBUTES -->
-				<section class="center">
-					<h1>Manipulating Element Attributes</h1>
-					<p>Putting the <code>.attr()</code> function to use</p>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Manipulating Element Attributes</h2>
+				<section data-background="#FFF" class="text-left">
+					<h2>Working Locally with JavaScript</h2>
 					<hr>
-					<p><code>.attr('attribute-name')</code></p>
-					<p class="pad-left-lg text-smallest">&rArr; Gets the value of the matched attribute name</p>
-<pre><code>
-	<img src="keanu.jpg">
 
-	$('img').attr('src')
-	// returns 'keanu.jpg'
+					<div class="text-smaller">
+						<p>&#149; Create JavaScript files using the <code>.js</code> extension</p>
+						<p>&#149; Example: <code>script.js</code></p>
+						<p>&#149; Two methods to link HTML and JS:</p>
+						<p class="pad-left-lg">&rArr; External (most common; preferred):</p>
+<pre><code>
+	&lt;script type="text/javascript" src="script.js"></script>
 
 </code></pre>
-					<p><code>.attr('attribute-name', 'attribute-value')</code></p>
-					<p class="pad-left-lg text-smallest">&rArr; Changes the value of <code>'attribute-name'</code> to 'attribute value'</p>
+						<p class="pad-left-lg">&rArr; Locally (in our HTML):</p>
 <pre><code>
-	$('img').attr('src', 'gary-busey.jpg')
-
-	<img src="gary-busey.jpg">
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Getting Element Attributes</h2>
-					<hr>
-					<div class="text-smallest">
-						<p>Assuming the following HTML:</p>
-<pre><code>
-	<a href="http://google.com">Google</a>
-	<img src="smiley.png" id="logo">
-
-</code></pre>
-						<p>Get attribute <code>.attr('attribute-name')</code>:</p>
-<pre><code>
-	$('a').attr('href')
-
-	// returns 'http://google.com'
-
-</code></pre>
-<pre><code>
-	$('#logo').attr('id')
-
-	// returns 'logo'
-
-</code></pre>
-					</div>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Setting Element Attributes</h2>
-					<hr>
-					<div class="text-smallest">
-						<p>Assuming the following HTML:</p>
-<pre><code>
-	<img src="smiley.png" id="logo">
-
-</code></pre>
-						<p>Set attribute <code>.attr('attribute-name', 'attribute-value')</code>:</p>
-<pre><code>
-	$('#logo').attr('src', 'frowney.png')
-
-</code></pre>
-						<p>Turns the above HTML into:</p>
-<pre><code>
-	<img src="frowney.png" id="logo">
+	<p>some text</p>
+	<script type="text/javascript">
+		// Write JavaScript here...plz don't do this
+	</script>
 
 </code></pre>
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>CodeAlong</h1>
-					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/WQVPzW?editors=101">http://codepen.io/cheshireoctopus/pen/WQVPzW?editors=101</a></p>
+					<h1>Code Along</h1>
+					<div class="text-left text-smaller">
+						<p>1. Open <code>first-javascript</code> directory in SublimeText</p>
+						<p>2. Open the file <code>script.js</code></p>
+						<p>3. Add the following to <code>index.html</code>, above <code>&lt;/body&gt;</code></p>
+<pre><code>
+	&lt;script type="text/javascript" src="script.js">&lt;/script>
+
+</code></pre>
+						<p>3. Add the following to <code>script.js</code></p>
+<pre><code>
+	alert('this is an alert. this is annoying');
+
+	document.write('writing to the document, like a boss');
+
+</code></pre>
+						<p>4. Save and open <code>index.html</code> in the browser</p>
+					</div>
 				</section>
 
 				<section class="center">
-					<h1>Exercise: jQuery City</h1>
+					<h1>Let's take a Break</h1>
+					<img src="../img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- JAVASCRIPT DATA TYPES -->
+				<section class="center">
+					<h1>JavaScript Data Types</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">JavaSript: Data Types</h2>
+					<hr>
+
 					<div class="text-left">
-						<p>Implement functionality for the following:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&#149; When a user clicks on a thumbnail, the larger image <code>img id="bigimage"</code> is replaced by the corresponding thumbnail</p>
-							<p>&#149; Hint: use <code>.attr()</code></p>
+						<p>&#149; In the machine, there is only data</p>
+						<p>&#149; Data are separated by type:</p>
+						<p class="pad-left-lg text-smaller">&rArr; Numbers</p>
+						<p class="pad-left-lg text-smaller">&rArr; Strings</p>
+						<p class="pad-left-lg text-smaller">&rArr; Booleans</p>
+						<p class="pad-left-lg text-smaller">&rArr; Objects</p>
+						<p class="pad-left-lg text-smaller">&rArr; Functions</p>
+						<p class="pad-left-lg text-smaller">&rArr; Null/Undefined</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Data Types: Numbers</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Numbers:</p>
+						<p class="pad-left-lg">&rArr; Used for arithmetic: (operators: +, -, *, / )</p>
+						<div class="pad-left-lg">
+							<p class="pad-left-lg">2 + 2</p>
+							<p class="pad-left-lg">2 - 2</p>
+							<p class="pad-left-lg">2 * 2</p>
+							<p class="pad-left-lg">2 / 2</p>
 						</div>
 					</div>
 				</section>
 
-				<!-- BREAK (5-7 mins) -->
-				<section class="center">
-					<h1>15 minute break</h1>
-					<img src="../img/main/break-time-bear.jpg">
+				<section data-background="#FFF">
+					<h2 class="text-left">Data Types: Strings</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Srings:</p>
+						<p class="pad-left-lg">&rArr; Used to represent text: "Hello, World!"</p>
+						<p>&#149; Notable for <u>String Concatenation</u>:</p>
+						<div class="fragment">
+							<p class="pad-left-lg"><code>'c' + 'a' + 't'</code></p>
+							<p class="pad-left-lg"><code>=&gt; 'cat'</code></p>
+						</div>
+						<div class="fragment">
+							<p class="pad-left-lg"><code>'i have ' + 2 + 'cats'</code></p>
+							<p class="pad-left-lg"><code>=&gt; 'i have 2 cats;</code></p>
+						</div>
+					</div>
 				</section>
 
-				<!-- $(this) -->
 				<section class="center">
-					<h1>$(this)</h1>
+					<h1>Code Along</h1>
 					<div class="text-left text-smaller">
-						<p>1) Open the following: <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101">http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101</a></p>
-						<p>2) What's going on here?</p>
+						<p>1. Reopen <code>first-javascript</code> in SublimeText</p>
+						<p>2. Add the following <code>document.write()</code> messages:</p>
+						<div class="pad-left-lg">
+							<p>&#149; The product of 10 and 10:</p>
+<pre><code>
+	document.write(10 * 10);
+
+</code></pre>
+							<p>&#149; The quotient of 100 and 10</p>
+							<p>&#149; The difference of 50 and 17</p>
+							<p>&#149; The sum of 50 and 17</p>
+							<p>&#149; Your first and last name</p>
+						</div>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>$(this)</h2>
-					<hr>
-					<p><code>$(this)</code> allows us to target specific elements that invoked (or called) a function</p>
-
-					<p>&#149; Refactor previous CodePen using <code>$(this)</code>:</p>
-<pre><code>
-	$('span').click(function () {
-		$(this).css('color', 'red')
-	})
-
-</code></pre>
-					<p>&#149; On the click event, only the <code>&lt;span&gt;</code> that invoked the function will turn red</p>
+				<!-- VARIABLES -->
+				<section class="center">
+					<h1>Variables</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>$(this) - More technical explanation</h2>
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables</h2>
 					<hr>
-					<div class="text-smaller">
-						<p>&#149; In JS, functions are called (invoked) by an object</p>
-						<p>&#149; Whatever object called the function, can be accessed inside the function using <code>this</code></p>
-						<p>&#149; <code>this</code> is said to be the "context" of the function</p>
-						<p>&#149; We can "wrap" <code>this</code> in jQuery: <code>$(this)</code></p>
-						<p>&#149; HTML elements are objects, too:</p>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Often, you will want to store, or keep track of, data in a program</p>
+						<p class="text-smaller">&#149; Declare using the <u>var</u> keyword</p>
+						<p class="text-smaller">&#149; Will store the piece of data in memory</p>
+						<p class="text-smaller">&#149; Use the variable's name to "call" it, or retrieve it from memory:</p>
 <pre><code>
-	$('span').click(function () {
-		$(this).css('color', 'red')
-	})
+	var x = 2;
+	var y = 2;
+
+	x
+	=> 2
+
+	x + y
+	=> 4
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Naming Rules</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Take care when naming your variables</p>
+						<p>&#149; Variable names should reflect the data they describe</p>
+						<p>&#149; Other naming conventions:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; Names should start with a lowercase letter</p>
+							<p>&rArr; Cannot use spaces; use hyphens or underscores instead</p>
+							<p>&rArr; Better yet, use CamelCase:</p>
+<pre><code>
+	var currentTemp = 70;
+	var targetTemp = 73;
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Reassignment</h2>
+					<hr>
+
+					<p>1. Create a variable, x, and assign it to 2</p>
+					<p>
+<pre><code>
+	var x = 2;
+	> 2
+
+</code></pre>
+					</p>
+					<p>2. Perform some arithmetic on x</p>
+					<p>
+<pre><code>
+	x * 2
+	> 4
+
+</code></pre>
+					</p>
+					<p>3. What's x now equal to?</p>
+					<p>
+<pre><code>
+	x
+	> 2
+
+</code></pre>
+					</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Reassignment</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&rArr; You must <u>reassign</u> variables to change them</p>
+					</div>
+<pre><code>
+	var x = 2;
+	> 2
+
+	x * 2
+	> 4
+
+	x
+	> 2
+
+	x = x * 2
+	> 4
+
+	x
+	> 4
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left">
+						<p>1. Open <code>first-javascript</code> in SublimeText</p>
+						<p>2. Store your previous arthimetic in variables:</p>
+<pre><code>
+	var num1 = 10 * 10;
+
+</code></pre>
+						<p>3. Use <code>document.write()</code> with the vaiables:</p>
+<pre><code>
+	document.write(num1);
+
+</code></pre>
+
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Functions</h1>
+					<img src="../img/class07/conjunction-function.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Functions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
+						<p class="text-smaller">&#149; Often take an input, perform logic on that input, and return ouput</p>
+						<p class="text-smaller">&#149; Think of them as miniature programs</p>
+
+						<p class="text-smaller">&#149; What does this function do?</p>
+<pre><code>
+	function hello () {
+		var greeting = 'hello!';
+
+		greeting = 'hello, world!';
+
+		alert(greeting);
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center" id="cool-id">
+					<p><code>document.getElementById()</code></p>
+				</section>
+
+				<section data-background="#FFF">
+					<p class="text-left">document.getElementById()</p>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; One of the most common/useful JavaScript methods</p>
+						<p>&#149; Used to query HTML and return an element with a certain ID attribute</p>
+<pre><code>
+	document.getElementById('logo')
+
+</code></pre>
+						<p>&#149; The above will look through an HTML document and return the first element with and ID = "logo"</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left">
+						<p class="text-smaller">1. Open <code>first-javascript</code> in SublimeText</p>
+						<p class="text-smaller">2. Add the following elements to <code>index.html</code>:</p>
+<pre><code>
+	<h1 id="title">Some Title</h1>
+	<p id="text-chunk">A block of text! Yay! Content! SEO!</p>
+
+</code></pre>
+						<p class="text-smaller">3. Use <code>document.getElementId()</code> to target the above elements and change their text color</p>
+
+<pre><code>
+	document.getElementById('title').style.color='red';
 
 </code></pre>
 					</div>
 				</section>
 
 				<section class="center">
-					<h1>CodeAlong</h1>
-					<p>Refactor jQuery City using <code>$(this)</code></p>
-				</section>
+					<h1>Homework</h1>
 
-				<section class="center">
-					<h1>Document Traversal</h1>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal</h2>
-					<hr>
-					<p class="text-smaller">&#149; Given a certain element, how do I access elements around it?</p>
-					<p class="text-smaller">&#149; jQuery makes it very easy to move around the DOM (document object model)</p>
-					<p class="text-smaller">&#149; "Walking the DOM"</p>
-					<p class="text-smaller">&#149; Details: <a href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
-					<p class="text-smaller">&#149; What does the following do?</p>
-<pre><code>
-	$('#wrapper').children()
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - HTML Review</h2>
-					<hr>
-<pre><code>
-	<div id="wrapper">
-		<p id="one">
-			<span>Some Text</span>
-		</p>
-		<p id="two">
-			<span>Some Text</span>
-		</p>
-		<p id="three">
-			<span>Some Text</span>
-		</p>
-	</div>
-
-</code></pre>
-					<div class="text-smallest">
-						<p>1: What are <code>#wrapper</code>'s children?</p>
-						<p>2: What is <code>#three</code>'s parent?</p>
-						<p>3: Does <code>#one</code> have any siblings?</p>
-						<p>4: Does the <code>&lt;span&gt;</code> child of <code>#one</code> have siblings?</p>
+					<div class="text-left">
+						<p>1) Final Project: Ideas/concepts & wireframes/sketches</p>
+						<p>2) Finish <code>startup-matchmaker/</code></p>
+						<!-- <p>3) GA Dash - note the JS exercises</p> -->
+						<p>2) Complete any unfinished HW</p>
+						<p>3) Color Theme Switcher: more on this on Tuesday</p>
 					</div>
 				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>Document Traversal - It's All in the Family</h3>
-					<hr>
-					<p><code>.children()</code></p>
-					<p class="pad-left-lg">&rArr; Get an element's child elements</p>
-					<p><code>.parent()</code></p>
-					<p class="pad-left-lg">&rArr; Get an element's parent element</p>
-					<p><code>.siblings()</code></p>
-					<p class="pad-left-lg">&rArr; Get an element's sibling elements</p>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - Siblings</h2>
-					<hr>
-					<p><code>.next()</code></p>
-					<p class="pad-left-lg">&rArr; Get the immediately following sibling element</p>
-					<p><code>.prev()</code></p>
-					<p class="pad-left-lg">&rArr; Get the immediately preceding sibling element</p>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - Find</h2>
-					<hr>
-					<p><code>.find('some-selector')</code></p>
-					<p class="pad-left-lg">&rArr; Will find all child elements matching a certain selector</p>
-<pre><code>
-	<div id="wrapper">
-		<p class="some-class">Some Text</p>
-		<p>Some Text</p>
-		<p class="some-class">Some Text</p>
-	</div>
-
-</code></pre>
-					<p>&#149; What does this do?</p>
-<pre><code>
-	$('#wrapper').find('.some-class').css('color', 'red')
-
-</code></pre>
-				</section>
-
-				<section class="center">
-					<h1>Exercise: Accordion</h1>
-				</section>
-
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF">
+					<h2 class="text-left">What's On Deck: JavaScript (pt. 2)</h2>
+					<hr>
+
+					<div class="text-left">
+						<h4>Class #8 (of 20) - Tuesday, September 6th</h4>
+
+						<div class="text-left">
+							<p>&rArr; More JavaScript!</p>
+							<p>&rArr; Functions</p>
+							<p>&rArr; The DOM</p>
+							<p>&rArr; JavaScript <code>.click</code> event</p>
+							<p>&rArr; Getting Input/Writing Output</p>
+						</div>
+					</div>
 				</section>
 
 				<section class="center">
